@@ -1,0 +1,21 @@
+name: "Paperless Automation"
+description: "Automate PDF submission to Stirling (OCR, Compression) and Paperless"
+version: "1.0.4"
+slug: "paperless_automation"
+init: false
+arch:
+  - aarch64
+  - amd64
+map:
+  - type: share
+    read_only: false
+options:
+  STIRLING_ADDRESS: null
+  PAPERLESS_ADDRESS: null
+  PAPERLESS_TOKEN: null
+  TIMEOUT_FILE_SETTLE: 300.0
+schema:
+  STIRLING_ADDRESS: str
+  PAPERLESS_ADDRESS: str
+  PAPERLESS_TOKEN: str
+  TIMEOUT_FILE_SETTLE: float

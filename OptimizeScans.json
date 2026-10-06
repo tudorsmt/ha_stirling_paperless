@@ -1,0 +1,41 @@
+{
+  "name": "OptimizeScans",
+  "pipeline": [
+    {
+      "operation": "/api/v1/misc/ocr-pdf",
+      "parameters": {
+        "fileId": "a1b2c3d4-5678-90ab-cdef-ghijklmnopqr",
+        "languages": [
+          "eng",
+          "deu"
+        ],
+        "sidecar": false,
+        "deskew": false,
+        "clean": false,
+        "cleanFinal": false,
+        "ocrType": "skip-text",
+        "ocrRenderType": "hocr",
+        "removeImagesAfter": false,
+        "fileInput": "automated"
+      }
+    },
+    {
+      "operation": "/api/v1/misc/compress-pdf",
+      "parameters": {
+        "fileId": "a1b2c3d4-5678-90ab-cdef-ghijklmnopqr",
+        "optimizeLevel": 3,
+        "expectedOutputSize": "",
+        "linearize": false,
+        "normalize": false,
+        "grayscale": false,
+        "fileInput": "automated"
+      }
+    }
+  ],
+  "_examples": {
+    "outputDir": "{outputFolder}/{folderName}",
+    "outputFileName": "{filename}-{pipelineName}-{date}-{time}"
+  },
+  "outputDir": "{outputFolder}",
+  "outputFileName": "{filename}"
+}
