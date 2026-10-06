@@ -1,8 +1,9 @@
 name: "Paperless Automation"
 description: "Automate PDF submission to Stirling (OCR, Compression) and Paperless"
-version: "1.0.4"
+version: "1.0.5"
 slug: "paperless_automation"
 init: false
+url: https://github.com/tudorsmt/ha_stirling_paperless
 arch:
   - aarch64
   - amd64
